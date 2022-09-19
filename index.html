@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!--Leaflet css, then js-->
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/leaflet@1.8.0/dist/leaflet.css"
+      integrity="sha512-hoalWLoI8r4UszCkZ5kL8vayOGVae1oxXe/2A4AO6J9+580uKHDO3JdHb7NzwwzK5xr/Fs0W40kiNHxM9vyTtQ=="
+      crossorigin=""
+    />
+    <script
+      src="https://unpkg.com/leaflet@1.8.0/dist/leaflet.js"
+      integrity="sha512-BB3hKbKWOc9Ez/TAwyWxNXeoV9c1v6FIeYiBieIWkpLjauysF18NzgR1MBNBXf8/KABdlkX68nAhlwcDFLGPCQ=="
+      crossorigin=""
+    ></script>
+    <!--openWeather API-->
+    <script type="text/javascript" src="leaflet/leaflet.js"></script>
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="leaflet/leaflet-openweathermap.css"
+    />
+    <script
+      type="text/javascript"
+      src="leaflet/leaflet-openweathermap.js"
+    ></script>
+    <!--imported texts-->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bungee+Shade&family=Monoton&display=swap"
+      rel="stylesheet"
+    />
+    <!--imported texts end-->
+    <!--JavaScript OpenLayer API-->
+    <script src="https://cdn.jsdelivr.net/gh/openlayers/openlayers.github.io@master/en/v6.15.1/build/ol.js"></script>
+
+    <!--css-->
+    <link rel="stylesheet" type="text/css" href="style.css" />
+    <!--javaScript-->
+    <script src="/app.js" defer></script>
+    <title>WeatherMan</title>
+  </head>
+  <body>
+    <div id="grid-div">
+      <div id="degree-div">
+        <p id="degree-p">--</p>
+        <p id="city-text">--</p>
+      </div>
+
+      <div id="search-div">
+        <form id="form">
+          <input
+            id="text-space"
+            type="text"
+            placeholder="What's the weather like in ..."
+          />
+          <button class="btn" type="button">
+            <img src="/img/search.png" />
+          </button>
+        </form>
+      </div>
+
+      <div id="forecast-div">
+        <h1 id="forecast-word">Forecast</h1>
+        <ul id="forecast-ul">
+          <li>
+            <p class="day-text">Mon.</p>
+            <p id="mon">25°F</p>
+            <img id="mon-img" class="list-img" src="/img/cloudy.png" />
+          </li>
+          <li>
+            <p class="day-text">Tue.</p>
+            <p id="tues">25°F</p>
+            <img id="mon-img" class="list-img" src="/img/snow.png" />
+          </li>
+          <li>
+            <p class="day-text">Wed.</p>
+            <p id="wed">25°F</p>
+            <img id="mon-img" class="list-img" src="/img/snow.png" />
+          </li>
+          <li>
+            <p class="day-text">Thu.</p>
+            <p id="thurs">25°F</p>
+            <img id="mon-img" class="list-img" src="/img/sun.png" />
+          </li>
+          <li>
+            <p class="day-text">Fri.</p>
+            <p id="fri">25°F</p>
+            <img id="mon-img" class="list-img" src="/img/thunder.png" />
+          </li>
+          <li>
+            <p class="day-text">Sat.</p>
+            <p id="sat">25°F</p>
+            <img id="mon-img" class="list-img" src="/img/thunder.png" />
+          </li>
+          <li>
+            <p class="day-text">Sun.</p>
+            <p id="sun">25°F</p>
+            <img id="mon-img" class="list-img" src="/img/cloudy.png" />
+          </li>
+        </ul>
+      </div>
+
+      <div id="maps-div"></div>
+    </div>
+  </body>
+</html>
