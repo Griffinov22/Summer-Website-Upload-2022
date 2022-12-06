@@ -6,21 +6,15 @@
   padding: 0;
 }
 
-body {
-  width: 100vw;
-  height: 100vh;
-  overflow: hidden;
-  border: 1em outset orange;
-}
-
 #grid-div {
   display: grid;
-  width: 100%;
-  height: 100%;
+  width: 100vw;
+  height: 100vh;
   grid-template-columns: repeat(4, 1fr);
   grid-template-rows: 1fr 3fr;
   grid-gap: 2em;
   padding: 1em;
+  border: 1em outset orange;
 }
 
 #degree-div {
@@ -28,7 +22,8 @@ body {
   width: 100%;
   border: 0.5rem solid black;
   border-radius: 0.25em;
-  display: flex wrap;
+  display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   text-align: center;
@@ -37,7 +32,6 @@ body {
 }
 
 #degree-p {
-  width: fit-content;
   margin: 0 auto;
   margin-bottom: -0.5em;
   color: blue;
@@ -46,7 +40,6 @@ body {
 
 #city-text {
   font-size: 0.5em !important;
-  height: 20%;
   line-height: 1.5ch;
   margin: 0 auto;
   padding: 10px 10px;
@@ -112,39 +105,42 @@ body {
   grid-row: 2/3;
 }
 
-#forecast-word {
-  width: 100%;
+#header-box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   height: 20%;
+  border-bottom: 0.25em dashed black;
+}
+
+#forecast-word {
   text-align: center;
   font-family: "Bungee Shade", cursive;
-  border-bottom: 0.25em dashed black;
 }
 
 #forecast-ul {
   width: 100%;
+  height: 80%;
   display: flex;
-  gap: 0.8em;
   flex-direction: column;
   list-style-type: none;
 }
 #forecast-ul li {
-  height: 100%;
+  width: 100%;
+  flex: 1;
   display: flex;
-  gap: 1em;
-  justify-content: center;
+  justify-content: space-around;
   align-items: center;
   font-size: 1.5em;
+  font-weight: 600;
   border-bottom: 0.25em solid black;
 }
-#forecast-ul li:first-child {
-  padding-top: 0.5em;
-}
 #forecast-ul li:last-child {
-  margin-bottom: 0.5em;
   border-bottom: 0;
 }
 #forecast-ul .list-img {
   width: 10%;
+  aspect-ratio: 1/1;
 }
 
 #maps-div {
@@ -161,6 +157,38 @@ body {
   background: linear-gradient(to bottom right, orange, white, yellow);
   border: 2px solid white;
   border-radius: 10px;
+}
+
+@media (max-width: 800px) {
+  #grid-div {
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 0.5fr 2fr 3fr;
+    height: auto;
+    padding-bottom: 50px;
+  }
+  #degree-div {
+    grid-area: auto;
+    width: 80%;
+    margin: 0 auto;
+  }
+  #search-div {
+    grid-column: auto;
+    width: 80%;
+    margin: 0 auto;
+  }
+  #forecast-div {
+    grid-row: auto;
+    width: 80%;
+    margin: 0 auto;
+  }
+  #forecast-ul .list-img {
+    width: 5%;
+  }
+  #maps-div {
+    grid-area: auto;
+    width: 80%;
+    margin: 0 auto;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */
