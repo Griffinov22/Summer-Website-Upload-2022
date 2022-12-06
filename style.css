@@ -70,12 +70,12 @@
 #form input {
   order: 2;
   padding: 0;
+  padding-left: 2em;
   margin: 0;
   width: 100%;
   border: 0.15rem solid orange;
   border-radius: 2em;
   height: 2em;
-  padding-left: 2em;
   font-size: 20px;
   font-family: monospace;
 }
@@ -175,6 +175,9 @@
     grid-column: auto;
     width: 80%;
     margin: 0 auto;
+  }
+  #form input {
+    padding-right: 1em;
   }
   #forecast-div {
     grid-row: auto;
