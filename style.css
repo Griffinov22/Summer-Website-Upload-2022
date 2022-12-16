@@ -122,14 +122,13 @@
 #forecast-ul {
   width: 100%;
   height: 80%;
-  flex: 1;
   display: flex;
   flex-direction: column;
   list-style-type: none;
 }
 #forecast-ul li {
   width: 100%;
-  flex: 1;
+  height: 14.2857142857%;
   display: flex;
   justify-content: space-around;
   align-items: center;
@@ -138,10 +137,10 @@
   border-bottom: 0.25em solid black;
 }
 #forecast-ul li:last-child {
-  border-bottom: 0;
+  border-bottom: none;
 }
 #forecast-ul .list-img {
-  width: 10%;
+  width: 15%;
   aspect-ratio: 1/1;
 }
 
@@ -185,9 +184,6 @@
     grid-row: auto;
     width: 80%;
     margin: 0 auto;
-  }
-  #forecast-ul li:last-child {
-    padding-bottom: 0.5em;
   }
   #maps-div {
     grid-area: auto;

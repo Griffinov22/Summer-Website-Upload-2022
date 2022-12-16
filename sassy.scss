@@ -132,13 +132,13 @@ $retro-font: "Monoton", cursive;
 #forecast-ul {
   width: 100%;
   height: 80%;
-  flex: 1;
   display: flex;
   flex-direction: column;
   list-style-type: none;
   li {
     width: 100%;
-    flex: 1;
+    // flex: 1;
+    height: calc(100% / 7);
 
     display: flex;
     // gap: 10%;
@@ -149,10 +149,10 @@ $retro-font: "Monoton", cursive;
     border-bottom: 0.25em solid black;
   }
   li:last-child {
-    border-bottom: 0;
+    border-bottom: none;
   }
   .list-img {
-    width: 10%;
+    width: 15%;
     aspect-ratio: 1/1;
   }
 }
@@ -201,9 +201,9 @@ $retro-font: "Monoton", cursive;
     width: 80%;
     margin: 0 auto;
   }
-  #forecast-ul li:last-child {
-    padding-bottom: 0.5em;
-  }
+  // #forecast-div li:last-child {
+  //   padding-bottom: 12%;
+  // }
   #maps-div {
     grid-area: auto;
     width: 80%;
